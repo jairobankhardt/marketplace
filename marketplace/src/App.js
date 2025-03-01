@@ -8,7 +8,7 @@ import data from "./data.json";
 function App() {
   const [categoryFilter, setCategoryFilter] = useState("");
 
-  const productTypes = [...new Set(data.map((product) => product.type))];
+  const productTypes = [...new Set(data.map((product) => product.type))].sort();
 
   const handleFilterChange = (category) => {
     setCategoryFilter(category);
