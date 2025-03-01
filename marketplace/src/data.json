@@ -48,15 +48,5 @@
     "available_sizes": ["44", "39"],
     "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "sport": "Basquete"
-  },
-  {
-    "name": "Não categoria",
-    "image_url": "https://static.netshoes.com.br/produtos/calcao-puma-liga-core-masculino/56/NWG-1619-056/NWG-1619-056_zoom1.jpg?ts=1643646713&",
-    "type": "Aleatório",
-    "price": 9999.69,
-    "seller": "Jairo",
-    "available_sizes": ["P", "M", "G"],
-    "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "sport": "Corrida"
   }
 ]
