@@ -8,13 +8,15 @@ import data from "./data.json";
 function App() {
   const [categoryFilter, setCategoryFilter] = useState("");
 
+  const productTypes = [...new Set(data.map((product) => product.type))];
+
   const handleFilterChange = (category) => {
     setCategoryFilter(category);
   };
 
   return (
     <div className="App">
-      <Navbar onFilterChange={handleFilterChange} />
+      <Navbar productTypes={productTypes} onFilterChange={handleFilterChange} />
       <ProductList products={data} categoryFilter={categoryFilter} />
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 
-const CustomNavbar = ({ onFilterChange }) => {
+const CustomNavbar = ({ productTypes, onFilterChange }) => {
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
@@ -9,20 +9,19 @@ const CustomNavbar = ({ onFilterChange }) => {
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link onClick={() => onFilterChange("")}>Todos</Nav.Link>
             <NavDropdown title="Categorias" id="nav-dropdown">
-              <NavDropdown.Item onClick={() => onFilterChange("Camiseta")}>
-                Camiseta
+              <NavDropdown.Item onClick={() => onFilterChange("")}>
+                Todas
               </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => onFilterChange("Regata")}>
-                Regata
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => onFilterChange("Calção")}>
-                Calção
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => onFilterChange("Acessório")}>
-                Acessório
-              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              {productTypes.map((type, index) => (
+                <NavDropdown.Item
+                  key={index}
+                  onClick={() => onFilterChange(type)}
+                >
+                  {type}
+                </NavDropdown.Item>
+              ))}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
